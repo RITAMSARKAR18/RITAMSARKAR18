@@ -1,0 +1,466 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+/* Navbar Styling */
+.navbar {
+    height: 60px; /* Fixed height for the navbar */
+    background-color: #0F1111; /* Dark background color */
+    color: white; /* White text color */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items in the center */
+    justify-content: space-evenly; /* Distribute items evenly with space around them */
+}
+
+.nav-logo {
+    height: 50px; /* Height for the logo container */
+    width: 100px; /* Width for the logo container */
+}
+
+.logo {
+    background-image: url("images/amazon_logo.png"); /* Path to your Amazon logo image */
+    background-size: cover; /* Cover the entire container */
+    height: 50px;
+    width: 100%;
+}
+
+/* General border style for clickable elements in navbar */
+.border {
+    border: 1.5px solid transparent; /* Transparent border by default */
+    padding: 5px; /* Padding for a larger hover area */
+    border-radius: 2px; /* Slightly rounded corners */
+}
+
+.border:hover {
+    border: 1.5px solid white; /* White border on hover */
+}
+
+/* Address Box (Location) */
+.nav-address {
+    /* The border class already handles overall styling and hover */
+    display: flex; /* Use flexbox for content inside address box */
+    flex-direction: column; /* Stack "Deliver to" and the city/update link */
+    align-items: flex-start; /* Align text to the left */
+    margin-left: 15px; /* Adjust left margin as needed */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.add-first {
+    color: #cccccc; /* Lighter color for "Deliver to" */
+    font-size: 0.85rem; /* Smaller font size */
+    margin-left: 15px; /* Aligns with icon below if no icon in this line */
+}
+
+.add-icon {
+    display: flex; /* Use flexbox for icon and city name */
+    align-items: center; /* Vertically align icon and text */
+}
+
+.add-icon i {
+    margin-right: 5px; /* Space between location icon and city name */
+}
+
+.add-second {
+    font-size: 1rem; /* Larger font size for city name */
+    font-weight: 700; /* Bold text for city name */
+}
+
+/* Style for the "Update location" text */
+.change-location-text {
+    font-size: 0.75rem; /* Smaller font size for this link */
+    color: #007185; /* Amazon blue link color */
+    text-decoration: underline; /* Make it look like a link */
+    margin-top: 2px; /* Small vertical space below the city name */
+}
+
+.change-location-text:hover {
+    color: #C7511F; /* Amazon orange on hover */
+}
+
+
+/* Search Bar */
+.nav-search {
+    display: flex; /* Use flexbox for search components */
+    justify-content: space-evenly; /* Distribute search components */
+    width: 620px; /* Fixed width for the search bar */
+    height: 40px; /* Fixed height */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.search-select {
+    background-color: #f3f3f3; /* Light grey background for dropdown */
+    width: 50px; /* Fixed width for the dropdown */
+    text-align: center; /* Center text in dropdown */
+    border-top-left-radius: 4px; /* Rounded top-left corner */
+    border-bottom-left-radius: 4px; /* Rounded bottom-left corner */
+    border: none; /* No default border */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.search-input {
+    width: 100%; /* Take up remaining width */
+    font-size: 1rem; /* Standard font size */
+    border: none; /* No default border */
+    padding-left: 10px; /* Padding inside the input field */
+    outline: none; /* Remove outline on focus */
+}
+
+.search-icon {
+    /* Styles for the search button */
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: #febd68;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0F1111;
+    cursor: pointer;
+    /* Added styles for button element to override defaults */
+    border: none;
+    padding: 0;
+}
+
+
+.nav-search:focus-within {
+    border: 2px solid #FEBD68; /* Orange border when any element inside is focused */
+    outline: none; /* Remove default outline */
+}
+
+/* Sign-in & Returns/Orders */
+span {
+    font-size: 0.7rem; /* Smaller font for "Hello, sign in" and "Returns" */
+}
+
+.nav-second {
+    font-size: 0.85rem; /* Standard font for "Account & Lists" and "& Orders" */
+    font-weight: 700; /* Bold text */
+}
+
+/* Cart Icon */
+.nav-cart i {
+    font-size: 30px; /* Size of the cart icon */
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: flex-end; /* Align icon and text to the bottom */
+    padding-bottom: 5px; /* Adjust vertical position */
+    position: relative; /* For future positioning of cart count badge */
+}
+
+/* Panel Below Navbar (Categories/Deals) */
+.panel {
+    height: 40px; /* Fixed height */
+    background-color: #222f3d; /* Dark blue background */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    justify-content: space-evenly; /* Distribute items evenly */
+    color: white; /* White text color */
+    font-size: 0.85rem; /* Standard font size */
+}
+
+.panel-ops p {
+    display: inline; /* Keep text on the same line */
+    margin-left: 15px; /* Space between list items */
+    cursor: pointer; /* Indicate clickable links */
+}
+
+/* Hover effect for all panel items */
+.panel-ops p:hover,
+.panel-all:hover,
+.panel-deals:hover {
+    border: 1px solid transparent; /* Prevent content shift on hover */
+    padding: 3px 6px; /* Similar padding as .border */
+    border-radius: 2px;
+    border-color: white; /* Show white border on hover */
+}
+
+.panel-ops {
+    width: 70%; /* Take up 70% of panel width */
+}
+
+.panel-all {
+    font-weight: 700; /* Bold text */
+    padding: 8px 9px; /* Consistent padding for hover effect */
+    display: flex; /* Use flexbox for icon and text */
+    align-items: center; /* Vertically align icon and text */
+}
+.panel-all i {
+    margin-right: 5px; /* Space between menu icon and "All" text */
+}
+
+.panel-deals {
+     padding: 8px 9px; /* Consistent padding */
+     cursor: pointer; /* Indicate clickable */
+}
+
+/* Hero Section (Main Banner) */
+.hero-section {
+    background-image: url("images/hero_image.jpg"); /* Path to your hero banner image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    height: 350px; /* Fixed height */
+    display: flex; /* Use flexbox to position message */
+    justify-content: center; /* Horizontally center message */
+    align-items: flex-end; /* Align message to the bottom */
+}
+
+.hero-msg {
+    background-color: white; /* White background for the message box */
+    color: black; /* Black text color */
+    height: 40px; /* Fixed height for message box */
+    display: flex; /* Use flexbox to center message text */
+    align-items: center; /* Vertically center message text */
+    justify-content: center; /* Horizontally center message text */
+    font-size: 0.85rem; /* Standard font size */
+    width: 80%; /* Width of the message box */
+    margin-bottom: 25px; /* Space from the bottom of the hero section */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+.hero-msg a {
+    color: #007185; /* Amazon blue link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+.hero-msg a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Shop Section (Product Grid) */
+.shop-section {
+    display: flex; /* Use flexbox for the grid */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-evenly; /* Distribute items evenly with space around them */
+    background-color: #e2e7e6; /* Light grey background */
+    padding: 20px 0; /* Vertical padding */
+}
+
+.box {
+    height: 400px; /* Fixed height for each product box */
+    width: 23%; /* Approx 4 boxes per row on large screens */
+    background-color: white; /* White background for each box */
+    padding: 20px 0 15px; /* Padding inside the box */
+    margin-top: 15px; /* Vertical space between rows */
+    border-radius: 8px; /* Soften edges of boxes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.2s ease; /* Smooth transition for shadow */
+}
+
+.box-img {
+    height: 300px; /* Fixed height for the image area */
+    background-size: cover; /* Default: Scales to cover the area, may crop */
+    background-position: center; /* Center the image within its area */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease; /* Smooth hover effect for image */
+}
+
+/* Specific style for Bewakoof T-Shirts image to ensure it's fully visible */
+.bewakoof-img {
+    background-size: contain; /* Scales the image to fit entirely within the box */
+    background-repeat: no-repeat; /* Prevents repetition if space remains */
+}
+
+
+.box-content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box-content h2 {
+    font-size: 1.2rem; /* Font size for product title */
+    margin-bottom: 0.5rem; /* Space below title */
+    color: #0F1111; /* Dark text color */
+}
+
+.box-content p {
+    color: #007185; /* Amazon blue link color */
+    font-size: 0.85rem; /* Smaller font for "See more" */
+    cursor: pointer; /* Indicate it's clickable */
+}
+.box-content p:hover {
+    color: #C7511F; /* Amazon orange on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Hover effect for the entire box */
+.box:hover .box-img {
+    transform: scale(1.02); /* Slightly zoom image on hover */
+}
+.box:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 15px; /* Space above the footer */
+}
+
+.foot-panel1 {
+    background-color: #37475a; /* Dark blue-grey background */
+    color: white; /* White text */
+    height: 50px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.foot-panel1:hover {
+    background-color: #485769; /* Slightly lighter on hover */
+}
+
+.foot-panel2 {
+    background-color: #222f3d; /* Darker blue background */
+    color: white;
+    display: flex;
+    justify-content: space-evenly; /* Distribute columns evenly */
+    padding: 30px 0; /* Vertical padding */
+    border-bottom: 1px solid #3a4553; /* Separator line */
+}
+
+.foot-panel2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* Remove bullet points */
+}
+
+.foot-panel2 ul a {
+    display: block; /* Make links block-level for spacing */
+    font-size: 0.85rem;
+    margin-top: 10px; /* Space between links */
+    color: #dddddd; /* Light grey for links */
+    text-decoration: none; /* Remove default underline */
+}
+
+.foot-panel2 ul a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.foot-panel2 p {
+    font-weight: 700; /* Bold headings */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.foot-panel3 {
+    background-color: #222f3d; /* Same as panel2 */
+    height: 70px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-panel3 .logo {
+    background-image: url("images/amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto; /* Center logo if only one item */
+}
+
+.foot-panel4 {
+    background-color: #0F1111; /* Darkest background */
+    color: white;
+    height: 80px;
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 25px; /* Adjust padding to center content */
+}
+
+.foot-panel4 .pages a {
+    color: white;
+    margin: 0 10px; /* Space between links */
+    text-decoration: none;
+}
+
+.foot-panel4 .pages a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel4 .copyright {
+    margin-top: 5px;
+    color: #DDDDDD; /* Slightly lighter color for copyright */
+}
+
+/* --- Basic Responsiveness --- */
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; /* Allow navbar items to wrap */
+        height: auto; /* Auto height to accommodate wrapped items */
+        padding: 10px 0; /* Vertical padding */
+    }
+    .nav-search {
+        width: 90%; /* Wider search bar */
+        margin: 10px auto; /* Center search bar with vertical margin */
+    }
+    /* Adjust address block for smaller screens */
+    .nav-address {
+        width: 100%; /* Full width */
+        text-align: center;
+        margin-top: 10px;
+        flex-direction: row; /* Keep elements in a row for mobile */
+        justify-content: center; /* Center content horizontally */
+        align-items: center;
+        padding-left: 0; /* Remove previous left margin */
+    }
+    .add-icon {
+        flex-direction: row; /* Keep icon and text in a row */
+        align-items: center;
+        justify-content: center;
+        margin-left: 0; /* Reset margin */
+        width: auto;
+    }
+    .add-first {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 5px; /* Add space below "Deliver to" */
+    }
+    /* Adjust other navbar items */
+    .nav-signin, .nav-return, .nav-cart {
+        width: 48%; /* Adjust for two columns */
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .panel {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+    .panel-ops, .panel-deals {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .box {
+        width: 45%; /* Two boxes per row */
+    }
+    .hero-msg {
+        width: 90%; /* Wider hero message */
+    }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .box {
+        width: 90%; /* One box per row */
+    }
+    .foot-panel2 {
+        flex-direction: column; /* Stack footer columns vertically */
+        align-items: center; /* Center items */
+    }
+    .foot-panel2 ul {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
