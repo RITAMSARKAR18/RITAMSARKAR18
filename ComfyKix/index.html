@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComfyKix - The Future is Yours</title>
+  <!-- Google Fonts - Inter for a clean, modern look like Adidas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlalHpgc7b+BvQJt+qg+n0Lw6l5Xo5+j5A2z5o4C5/4yB2z4f5O9eF5f+o5d5x4j4z4v0Q0e4O5g5S5V5w5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom CSS for specific overrides and fine-tuning -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- New Promotional Bar -->
+  <div class="promo-bar">
+    SIGN UP & GET 10% OFF
+  </div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <ul class="top-bar-links">
+      <li><a href="#">Help</a></li>
+      <li><a href="#" id="order-tracker-link">Order Tracker</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">Sign In</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="main-navbar">
+    <!-- Logo -->
+    <div class="navbar-logo-container">
+      <img src="images/logo.png" onerror="this.onerror=null;this.src='https://placehold.co/100x30/000/FFF?text=COMFYKIX+Step+into+Comfort';" alt="ComfyKix Logo - Step into Comfort" class="navbar-logo">
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="nav-links-list">
+      <li class="nav-link-item"><a href="#">Men</a></li>
+      <li class="nav-link-item"><a href="#">Women</a></li>
+      <li class="nav-link-item"><a href="#">Kids</a></li>
+      <li class="nav-link-item"><a href="#">Sports</a></li>
+      <li class="nav-link-item"><a href="#">Brands</a></li>
+      <li class="nav-link-item"><a href="#">Sale</a></li>
+    </ul>
+
+    <!-- Right Section - Icons -->
+    <div class="right-section-icons">
+      <button class="icon-button">
+        <i class="fas fa-search"></i>
+      </button>
+      <button class="icon-button" id="cart-icon-button">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+      <!-- Mobile Menu Button -->
+      <button class="icon-button mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section - Main landing hero -->
+  <section class="hero-main">
+    <img src="images/hero.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1920x700/000000/FFFFFF?text=COMFYKIX+HERO+IMAGE';" alt="ComfyKix Main Hero Background" class="hero-main-image">
+    <div class="hero-overlay">
+      <h1 class="hero-title">THE FUTURE IS YOURS</h1>
+      <p class="hero-subtitle">Discover the latest in performance footwear and stylish apparel. Push your limits with ComfyKix.</p>
+      <button class="hero-button">
+        Shop New Arrivals
+      </button>
+    </div>
+  </section>
+
+  <!-- BG2 Section before Men's Footwear -->
+  <section class="banner-section">
+    <img src="images/bg2.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1920x400/333333/FFFFFF?text=COMFYKIX+MEN+BANNER';" alt="ComfyKix Men's Section Background" class="banner-image">
+    <div class="banner-overlay">
+      <h2 class="banner-tagline">Unleash Your Potential</h2>
+    </div>
+  </section>
+
+  <!-- Men's Footwear Section -->
+  <section class="product-section">
+    <h2 class="section-title">Men's Footwear</h2>
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img src="images/mens1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=Men+Shoe+1';" alt="Men Shoe 1" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Velocity Stride</h3>
+          <p class="card-price">₹3,999</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Velocity Stride" data-product-price="3999">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Velocity Stride" data-product-price="3999">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="images/mens2.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=Men+Shoe+2';" alt="Men Shoe 2" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Urban Glide</h3>
+          <p class="card-price">₹2,499</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Urban Glide" data-product-price="2499">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Urban Glide" data-product-price="2499">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="images/mens3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=Men+Shoe+3';" alt="Men Shoe 3" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Street Conqueror</h3>
+          <p class="card-price">₹5,199</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Street Conqueror" data-product-price="5199">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Street Conqueror" data-product-price="5199">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="images/mens4.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=Image+N/A';" alt="ComfyKix Men Shoe 4" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Dynamic Runner</h3>
+          <p class="card-price">₹5,999</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Dynamic Runner" data-product-price="5999">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Dynamic Runner" data-product-price="5999">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BG3 Section before Women's Footwear -->
+  <section class="banner-section">
+    <img src="images/bg3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1920x400/666666/FFFFFF?text=COMFYKIX+WOMEN+BANNER';" alt="ComfyKix Women's Section Background" class="banner-image">
+    <div class="banner-overlay">
+      <h2 class="banner-tagline">Style Meets Performance</h2>
+    </div>
+  </section>
+
+  <!-- Women's Footwear Section -->
+  <section class="product-section">
+    <h2 class="section-title">Women's Footwear</h2>
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img src="images/womens1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F3F4F6/1F2937?text=Women+Shoe+1';" alt="Women Shoe 1" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Elegance Stride</h3>
+          <p class="card-price">₹4,999</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Elegance Stride" data-product-price="4999">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Elegance Stride" data-product-price="4999">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="images/womens2.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F3F4F6/1F2937?text=Women+Shoe+2';" alt="Women Shoe 2" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Active Flow</h3>
+          <p class="card-price">₹5,299</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Active Flow" data-product-price="5299">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Active Flow" data-product-price="5299">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="images/womens3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F3F4F6/1F2937?text=Women+Shoe+3';" alt="Women Shoe 3" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Flex Weaver</h3>
+          <p class="card-price">₹4,199</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Flex Weaver" data-product-price="4199">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Flex Weaver" data-product-price="4199">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="images/womens4.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F3F4F6/1F2937?text=Image+N/A';" alt="ComfyKix Women Shoe 4" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Swift Motion</h3>
+          <p class="card-price">₹5,999</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Swift Motion" data-product-price="5999">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Swift Motion" data-product-price="5999">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BG1 Section before New Arrivals -->
+  <section class="banner-section">
+    <img src="images/bg1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/1920x400/999999/FFFFFF?text=COMFYKIX+NEW+ARRIVALS+BANNER';" alt="ComfyKix New Arrivals Section Background" class="banner-image">
+    <div class="banner-overlay">
+      <h2 class="banner-tagline">Unleash Your Pace</h2>
+    </div>
+  </section>
+
+  <!-- New Arrivals Section -->
+  <section class="product-section">
+    <h2 class="section-title">Just In</h2>
+    <div class="product-grid">
+      <!-- Product Card 1 -->
+      <div class="product-card">
+        <img src="images/new1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=New+Shoe+1';" alt="New Shoe 1" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Quantum Leap</h3>
+          <p class="card-price">₹5,999</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Quantum Leap" data-product-price="5999">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Quantum Leap" data-product-price="5999">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 2 -->
+      <div class="product-card">
+        <img src="images/new2.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=New+Shoe+2';" alt="New Shoe 2" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Fusion Core</h3>
+          <p class="card-price">₹4,799</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Fusion Core" data-product-price="4799">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Fusion Core" data-product-price="4799">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 3 -->
+      <div class="product-card">
+        <img src="images/new3.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=New+Shoe+3';" alt="New Shoe 3" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Pulse Drive</h3>
+          <p class="card-price">₹5,499</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Pulse Drive" data-product-price="5499">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Pulse Drive" data-product-price="5499">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <!-- Product Card 4 -->
+      <div class="product-card">
+        <img src="images/new4.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E5E7EB/1F2937?text=Image+N/A';" alt="ComfyKix New Shoe 4" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">Aero Glide</h3>
+          <p class="card-price">₹5,599</p>
+          <div class="card-buttons-container">
+            <button class="card-button buy-now-btn" data-product-name="Aero Glide" data-product-price="5599">Buy Now</button>
+            <button class="card-button add-to-cart-btn" data-product-name="Aero Glide" data-product-price="5599">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-columns-grid">
+      <div>
+        <h4 class="footer-column-heading">Products</h4>
+        <ul>
+          <li class="footer-list-item"><a href="#">Shoes</a></li>
+          <li class="footer-list-item"><a href="#">Clothing</a></li>
+          <li class="footer-list-item"><a href="#">Accessories</a></li>
+          <li class="footer-list-item"><a href="#">New Arrivals</a></li>
+          <li class="footer-list-item"><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-column-heading">Sports</h4>
+        <ul>
+          <li class="footer-list-item"><a href="#">Running</a></li>
+          <li class="footer-list-item"><a href="#">Football</a></li>
+          <li class="footer-list-item"><a href="#">Cricket</a></li>
+          <li class="footer-list-item"><a href="#">Training</a></li>
+          <li class="footer-list-item"><a href="#">Outdoor</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-column-heading">Company Info</h4>
+        <ul>
+          <li class="footer-list-item"><a href="#">About Us</a></li>
+          <li class="footer-list-item"><a href="#">Careers</a></li>
+          <li class="footer-list-item"><a href="#">Press</a></li>
+          <li class="footer-list-item"><a href="#">Sustainability</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-column-heading">Support</h4>
+        <ul>
+          <li class="footer-list-item"><a href="#">Help & Customer Service</a></li>
+          <li class="footer-list-item"><a href="#">Order Tracker</a></li>
+          <li class="footer-list-item"><a href="#">Returns & Refunds</a></li>
+          <li class="footer-list-item"><a href="#">Sizing Charts</a></li>
+          <li class="footer-list-item"><a href="#">Store Finder</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p class="footer-copyright">&copy; 2025 ComfyKix, Inc. All Rights Reserved.</p>
+      <div class="social-icons-container">
+        <a href="#" class="social-icon-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Modal -->
+  <div id="shopping-cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items-container">
+        <!-- Cart items will be dynamically loaded here -->
+        <p class="empty-cart-message">Your cart is empty.</p>
+      </div>
+      <div class="cart-summary">
+        <p>Total: <span id="cart-total">₹0</span></p>
+        <button id="buy-all-items-btn" class="card-button">Buy All Items</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div id="order-confirmation-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Order Successful!</h2>
+      <p>Your order has been placed and will be processed shortly.</p>
+      <button class="card-button close-confirmation-btn">Close</button>
+    </div>
+  </div>
+
+  <!-- Order Tracker Modal -->
+  <div id="order-tracker-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Order Tracker</h2>
+      <div id="order-tracker-content">
+        <p>Enter your order number to track your order:</p>
+        <input type="text" id="order-number-input" placeholder="Order Number" class="order-input">
+        <button id="track-order-btn" class="card-button">Track Order</button>
+        <div id="order-status-display" class="order-status-display">
+          <!-- Order status will be displayed here -->
+        </div>
+      </div>
+      <button class="card-button close-tracker-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
