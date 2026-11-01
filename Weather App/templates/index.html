@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weather Predictor & Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="top-bar">
+        <h1>🌦️ AI Weather Predictor & Meteorologist</h1>
+        <form id="search-form" class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city (e.g., Kolkata, Tokyo)..." value="Kolkata" required>
+            <button type="submit">Search Weather</button>
+        </form>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- Left Column: Weather & ML Predictions -->
+        <section class="panel weather-panel">
+            <div id="weather-loading" class="status-msg">Loading weather & training ML model...</div>
+            <div id="weather-error" class="error-msg hidden"></div>
+
+            <div id="weather-content" class="hidden">
+                <div class="location-header">
+                    <h2 id="loc-name">--</h2>
+                    <span id="loc-condition" class="badge">--</span>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <span class="label">Temperature</span>
+                        <strong id="curr-temp">-- °C</strong>
+                        <small id="curr-feels">Feels like -- °C</small>
+                    </div>
+                    <div class="metric-card">
+                        <span class="label">Humidity</span>
+                        <strong id="curr-humidity">--%</strong>
+                    </div>
+                    <div class="metric-card">
+                        <span class="label">Wind Speed</span>
+                        <strong id="curr-wind">-- km/h</strong>
+                    </div>
+                </div>
+
+                <div class="ml-banner">
+                    <h3>🧠 Random Forest ML Prediction (Tomorrow)</h3>
+                    <p id="ml-text">--</p>
+                </div>
+
+                <h3>📅 7-Day Forecast</h3>
+                <div class="table-wrapper">
+                    <table class="forecast-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Condition</th>
+                                <th>Max Temp</th>
+                                <th>Min Temp</th>
+                                <th>Rain Chance</th>
+                            </tr>
+                        </thead>
+                        <tbody id="forecast-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column: AI Chatbot -->
+        <section class="panel chat-panel">
+            <h2>🤖 AI Meteorologist Chat</h2>
+            <div id="chat-box" class="chat-messages">
+                <div class="message assistant">
+                    Hello! Ask me about live weather, our Random Forest ML predictions, or travel advice for any city worldwide.
+                </div>
+            </div>
+            <form id="chat-form" class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Ask e.g. 'Will it rain in Mumbai this weekend?'" required>
+                <button type="submit" id="chat-send-btn">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
